@@ -17,13 +17,13 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('slug')->index('slug')->unique();
             $table->string('name');
-            $table->sting('banner');
+            $table->string('banner');
             $table->text('overview');
             $table->text('requirement');
             $table->text('fees');
-            $table->sting('subject')->index('subject');
-            $table->sting('laval')->index('laval');
-            $table->sting('destination')->index('destination');
+            $table->string('subject')->index('subject');
+            $table->string('laval')->index('laval');
+            $table->string('destination')->index('destination');
             $table->timestamps();
         });
     }
