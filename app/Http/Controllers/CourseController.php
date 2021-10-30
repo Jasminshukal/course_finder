@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-  public function index()
+  public function index(Request $request)
   {
-
+    return view('welcome',compact('request'));
   }
 
   public function search(Request $request)

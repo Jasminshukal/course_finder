@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function (Request $request) {
-    return view('welcome',compact('request'));
-});
+// Route::get('/', function (Request $request) {
+//     return view('welcome',compact('request'));
+// });
 
 Route::get('/',[CourseController::class,'index'])->name('DEMO');
 
