@@ -114,8 +114,7 @@
                             <div class="search-background bg-transparent typewrite-text">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 d-block mx-auto">
-                                        <form action="{{ route('search') }}" method="POST" class="form row g-0 ">
-                                            @csrf
+                                        <form action="{{ route('search') }}" class="form row g-0 ">
                                             @include('layouts._form')
                                         </form>
                                             {{-- <div class="form-group col-xl-2 col-lg-2 col-md-12 select2-lg br-ts-7 br-bs-7 mb-0 bg-white">
@@ -268,15 +267,15 @@
 					<div class="horizontal-main header-style1 bg-dark-transparent clearfix p-0 pt-0 border-bottom border-white-transparent">
 						<div class="horizontal-mainwrapper container clearfix">
 							<div class="desktoplogo">
-								<a href="index.html">
-									<img src="../../assets/images/brand/logo1.png" alt="img">
-									<img src="../../assets/images/brand/logo1.png" class="header-brand-img header-white" alt="logo">
+								<a href="/">
+									<img src="{{ asset('assets/images/brand/logo1.png') }}" alt="img">
+									<img src="{{ asset('assets/images/brand/logo1.png') }}" class="header-brand-img header-white" alt="logo">
 								</a>
 							</div>
 							<div class="desktoplogo-1">
-								<a href="index.html"><img src="../../assets/images/brand/logo.png" alt="img"></a>
+								<a href="/"><img src="{{ asset('assets/images/brand/logo.png') }}" alt="img"></a>
 							</div>
-							<nav class="horizontalMenu clearfix d-md-flex">
+							{{-- <nav class="horizontalMenu clearfix d-md-flex">
 								<ul class="horizontalMenu-list">
 									<li aria-haspopup="true"><a href="javascript:void(0)">Home <span class="fe fe-chevron-down"></span></a>
 										<ul class="sub-menu">
@@ -406,7 +405,20 @@
 										<span><a class="btn btn-secondary" href="course-posts.html">Register Now</a></span>
 									</li>
 								</ul>
-							</nav>
+							</nav> --}}
+                            <nav class="horizontalMenu clearfix d-md-flex">
+                                <ul class="horizontalMenu-list">
+                                    <li aria-haspopup="true"><a href="#">Home</a></li>
+                                    <li aria-haspopup="true"><a href="#">About Us </a></li>
+                                    <li aria-haspopup="true"><a href="#">Courses</a></li>
+                                    <li aria-haspopup="true"><a href="#">Institutes</a></li>
+                                    <li aria-haspopup="true"><a href="#">How it works</a></li>
+                                    <li aria-haspopup="true"><a href="#"> Contact Us</a></li>
+                                    <li aria-haspopup="true" class="p-0 mt-1">
+                                        <span><a class="btn btn-primary" href="course-posts.html">Register Now</a></span>
+                                    </li>
+                                </ul>
+                            </nav>
 						</div>
 					</div>
 				</div><!--/Horizontal-main -->
@@ -422,8 +434,7 @@
 											<h1 class=""><span class="font-weight-bold">2000+</span> Best  Courses Available Here!</h1>
 										</div>
 										<div class="search-background bg-transparent">
-                                            <form action="{{ route('search') }}" method="post" class="form row g-0 ">
-                                                @csrf
+                                            <form action="{{ route('search') }}" class="form row g-0 ">
                                                 @include('layouts._form')
                                             </form>
 										</div>

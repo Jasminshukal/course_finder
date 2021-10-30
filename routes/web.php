@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\CourseController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (Request $request) {
+    return view('welcome',compact('request'));
 });
 
-Route::post('Search',[CourseController::class,'search'])->name('search');
+Route::get('/',[CourseController::class,'index'])->name('DEMO');
+
+Route::get('Search',[CourseController::class,'search'])->name('search');
+
+Route::get('/Detail/{slug}',[CourseController::class,'detail'])->name('Detail');
 
 // Route::get('/Search', function () {
 //     return view('search');
 // });
-
-Route::get('/Detail/{slug}', function () {
-    return view('detail');
-});
 
 Auth::routes();
 

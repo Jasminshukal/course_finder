@@ -1,5 +1,5 @@
 <div class="form-group col-xl-2 col-lg-2 col-md-12 select2-lg br-ts-7 br-bs-7 mb-0 bg-white">
-    <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Destination">
+    <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Destination" name="destination">
         <optgroup label="Destination">
             <option value="united_kingdom">United Kingdom </option>
             <option value="new_zealand">New Zealand </option>
@@ -20,9 +20,8 @@
     </select>
 </div>
 <div class="form-group col-xl-2 col-lg-2 col-md-12 select2-lg mb-0 bg-white">
-    <select class="form-control select2-show-search border-bottom-0" data-placeholder="Programme Level">
+    <select class="form-control select2-show-search border-bottom-0" data-placeholder="Programme Level" name="level">
         <optgroup label="Categories">
-            <option>Programme Level</option>
             <option value="a_level">A Level</option>
             <option value="english_language_preparation">English Language Preparation</option>
             <option value="foundation">Foundation</option>
@@ -39,7 +38,7 @@
     </select>
 </div>
 <div class="form-group col-xl-2 col-lg-2 col-md-12 select2-lg mb-0 bg-white">
-    <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
+    <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category" name="Subject">
         <optgroup label="Categories">
             <option value="accounting">Accounting</option>
             <option value="art_and_design">Art and Design</option>
@@ -69,7 +68,7 @@
     </select>
 </div>
 <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0">
-    <input type="text" class="form-control input-xl br-0" placeholder="Search Courses...." data-min-length="1" list="courses" name="courses">
+    <input type="text" class="form-control input-xl br-0" placeholder="Search Courses...." data-min-length="1" list="courses" name="courses" value="{{ $request->courses ?? " " }}">
 </div>
 <div class="col-xl-2 col-lg-3 col-md-12 mb-0">
     <button type="submit" class="btn btn-xl btn-block btn-primary br-ts-md-0 br-bs-md-0"><i class="fe fe-search"></i> Search</button>

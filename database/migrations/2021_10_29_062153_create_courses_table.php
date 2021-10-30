@@ -17,7 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('slug')->index('slug')->unique();
             $table->string('name');
-            $table->string('banner');
+            $table->string('banner')->default('default.png');
             $table->text('overview');
             $table->text('requirement');
             $table->text('fees');
