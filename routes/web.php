@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[CourseController::class,'index'])->name('DEMO');
 
-Route::get('/CourseList',[CourseController::class,'index']);
+Route::get('/CourseList',[CourseController::class,'index'])->name('main');
 
 Route::get('Search',[CourseController::class,'search'])->name('search');
 

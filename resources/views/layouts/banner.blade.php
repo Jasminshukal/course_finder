@@ -267,13 +267,13 @@
 					<div class="horizontal-main header-style1 bg-dark-transparent clearfix p-0 pt-0 border-bottom border-white-transparent">
 						<div class="horizontal-mainwrapper container clearfix">
 							<div class="desktoplogo">
-								<a href="/">
+								<a href="{{ route('main') }}">
 									<img src="{{ asset('assets/images/brand/logo1.png') }}" alt="img">
 									<img src="{{ asset('assets/images/brand/logo1.png') }}" class="header-brand-img header-white" alt="logo">
 								</a>
 							</div>
 							<div class="desktoplogo-1">
-								<a href="/"><img src="{{ asset('assets/images/brand/logo.png') }}" alt="img"></a>
+								<a href="{{ route('main') }}"><img src="{{ asset('assets/images/brand/logo.png') }}" alt="img"></a>
 							</div>
 							{{-- <nav class="horizontalMenu clearfix d-md-flex">
 								<ul class="horizontalMenu-list">
