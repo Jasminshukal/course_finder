@@ -249,62 +249,62 @@
 		<a href="#top" id="back-to-top" ><i class="fa fa-long-arrow-up"></i></a>
 
 		<!-- JQuery js-->
-		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 
 		<!-- Bootstrap js -->
-		<script src="../../assets/plugins/bootstrap/js/popper.min.js"></script>
-		<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="{{ asset('assets/plugins/bootstrap/js/popper.min.js') }}"></script>
+		<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
 
 		<!--JQuery IT Coursesrkline js-->
-		<script src="../../assets/js/jquery.sparkline.min.js"></script>
+		<script src="{{ asset('assets/js/jquery.sparkline.min.js') }}"></script>
 
 		<!-- Circle Progress js-->
-		<script src="../../assets/js/circle-progress.min.js"></script>
+		<script src="{{ asset('assets/js/circle-progress.min.js') }}"></script>
 
 		<!-- Star Rating js-->
-		<script src="../../assets/plugins/jquery-bar-rating/jquery.barrating.js"></script>
-		<script src="../../assets/plugins/jquery-bar-rating/js/rating.js"></script>
+		<script src="{{ asset('assets/plugins/jquery-bar-rating/jquery.barrating.js') }}"></script>
+		<script src="{{ asset('assets/plugins/jquery-bar-rating/js/rating.js') }}"></script>
 
 		<!--Owl Carousel js -->
-		<script src="../../assets/plugins/owl-carousel/owl.carousel.js"></script>
+		<script src="{{ asset('assets/plugins/owl-carousel/owl.carousel.js') }}"></script>
 
 		<!--Horizontal Menu js-->
-		<script src="../../assets/plugins/horizontal-menu/horizontal-menu.js"></script>
+		<script src="{{ asset('assets/plugins/horizontal-menu/horizontal-menu.js') }}"></script>
 
 		<!--Counters -->
-		<script src="../../assets/plugins/counters/counterup.min.js"></script>
-		<script src="../../assets/plugins/counters/waypoints.min.js"></script>
-		<script src="../../assets/plugins/counters/numeric-counter.js"></script>
+		<script src="{{ asset('assets/plugins/counters/counterup.min.js') }}"></script>
+		<script src="{{ asset('assets/plugins/counters/waypoints.min.js') }}"></script>
+		<script src="{{ asset('assets/plugins/counters/numeric-counter.js') }}"></script>
 
 		<!--JQuery TouchSwipe js-->
-		<script src="../../assets/js/jquery.touchSwipe.min.js"></script>
+		<script src="{{ asset('assets/js/jquery.touchSwipe.min.js') }}"></script>
 
 		<!--Select2 js -->
-		<script src="../../assets/plugins/select2/select2.full.min.js"></script>
-		<script src="../../assets/js/select2.js"></script>
+		<script src="{{ asset('assets/plugins/select2/select2.full.min.js') }}"></script>
+		<script src="{{ asset('assets/js/select2.js') }}"></script>
 
 		<!-- Cookie js -->
-		<script src="../../assets/plugins/cookie/jquery.ihavecookies.js"></script>
-		<script src="../../assets/plugins/cookie/cookie.js"></script>
+		<script src="{{ asset('assets/plugins/cookie/jquery.ihavecookies.js') }}"></script>
+		<script src="{{ asset('assets/plugins/cookie/cookie.js') }}"></script>
 
 		<!-- Internal :::   Jquery flexdatalist js -->
-		<script src="../../assets/plugins/jquery.flexdatalist/jquery.flexdatalist.js"></script>
-		<script src="../../assets/plugins/jquery.flexdatalist/data-list.js"></script>
+		<script src="{{ asset('assets/plugins/jquery.flexdatalist/jquery.flexdatalist.js') }}"></script>
+		<script src="{{ asset('assets/plugins/jquery.flexdatalist/data-list.js') }}"></script>
 
 		<!-- sticky js-->
-		<script src="../../assets/js/sticky.js"></script>
+		<script src="{{ asset('assets/js/sticky.js') }}"></script>
 
 		<!-- Switcher js -->
-		<script src="../../assets/switcher/js/switcher.js"></script>
+		<script src="{{ asset('assets/switcher/js/switcher.js') }}"></script>
 
 		<!-- Scripts js-->
-		<script src="../../assets/js/owl-carousel.js"></script>
+		<script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
 
 		<!-- Typewritter js-->
-		<script src="../../assets/js/typewritter.js"></script>
+		<script src="{{ asset('assets/js/typewritter.js') }}"></script>
 
 		<!-- Custom js-->
-		<script src="../../assets/js/custom.js"></script>
+		<script src="{{ asset('assets/js/custom.js') }}"></script>
 
 	</body>
 
