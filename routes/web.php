@@ -55,5 +55,5 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::post('/University/edit/{id}', [UniversityController::class, 'update'])->name('University.update');
     //add
     Route::get('/University/add', [UniversityController::class, 'add'])->name('University.add');
-    Route::post('/University/add', [UniversityController::class, 'update'])->name('University.update');
+    Route::post('/University/add', [UniversityController::class, 'update'])->name('University.store');
 });
