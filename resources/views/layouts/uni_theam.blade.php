@@ -74,15 +74,13 @@
 									<img src="{{ asset('assets/images/brand/logo-white.png') }}" class="w-auto border-0" alt="img">
 									<ul class="list-unstyled mb-0 mt-4">
 										<li>
-											<a href="javascript:void(0)">Second stret, New York, NY 10012, US</a>
+											<a href="javascript:void(0)">53 Hameem StAl NahyanAbu DhabiUnited Arab Emirates</a>
 										</li>
 										<li>
-											<a href="javascript:void(0)">info@example.com, info@edomi.com</a></li>
+											<a href="mailto:info@unistudent.ae" target="_blank" rel="noopener">info@unistudent.ae</a>
+                                        </li>
 										<li>
-											<a href="javascript:void(0)">+ 01 234 567 88</a>
-										</li>
-										 <li>
-											<a href="javascript:void(0)">+ 01 234 567 89</a>
+											<a href="javascript:void(0)">+971 2 6505959</a>
 										</li>
 									</ul>
 									<ul class="list-unstyled list-inline mt-5 mb-lg-0 mb-5">
