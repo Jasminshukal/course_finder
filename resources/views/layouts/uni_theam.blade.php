@@ -116,12 +116,9 @@
 								<div class="col-lg-5 col-md-12">
 									<h6 class="font-weight-normal text-white">Categories</h6>
 									<ul class="list-unstyled mb-5 mb-lg-0">
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Software Development</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Web Development</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Web Designing</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Business Classes</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Animation Classes</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Networking Classes</a></li>
+										<li><a href="/Search?Subject=accounting"><i class="fe fe-chevron-right"></i> Accounting</a></li>
+										<li><a href="/Search?Subject=art_and_design"><i class="fe fe-chevron-right"></i>Art And Design</a></li>
+										<li><a href="/Search?Subject=business"><i class="fe fe-chevron-right"></i>Business</a></li>
 									</ul>
 								</div>
 							</div>
@@ -131,23 +128,17 @@
 								<div class="col-lg-4 col-md-12">
 									<h6 class="font-weight-normal text-white">Courses</h6>
 									<ul class="list-unstyled mb-5 mb-lg-0">
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Angular</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Java</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> HTML</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Devops</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Php Laravel</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Digital Marketing</a></li>
+										<li><a href="/Search?level=certificate"><i class="fe fe-chevron-right"></i> Certificate</a></li>
+										<li><a href="/Search?level=foundation"><i class="fe fe-chevron-right"></i> Foundation</a></li>
+										<li><a href="/Search?level=high_school"><i class="fe fe-chevron-right"></i> High School</a></li>
 									</ul>
 								</div>
 								<div class="col-lg-4 col-md-12">
 									<h6 class="font-weight-normal text-white">Our Company</h6>
 									<ul class="list-unstyled mb-lg-0 mb-5">
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Our Team</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Contact US</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> About Us</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Services</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Blog News</a></li>
-										<li><a href="javascript:;"><i class="fe fe-chevron-right"></i> Online Classes</a></li>
+										<li><a href="Search?destination=new_zealand"><i class="fe fe-chevron-right"></i> New Zealand </a></li>
+										<li><a href="Search?destination=australia"><i class="fe fe-chevron-right"></i> Australia </a></li>
+										<li><a href="Search?destination=grenada"><i class="fe fe-chevron-right"></i> Grenada </a></li>
 									</ul>
 								</div>
 								<div class="col-lg-4 col-md-12">

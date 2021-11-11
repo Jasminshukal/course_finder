@@ -232,7 +232,7 @@
 							<div class="top-bar-end">
 								<ul class="custom">
 									<li>
-										<a href="{{ url('register') }}" class="text-dark"><i class="fa fa-user me-1"></i> <span>Register1</span></a>
+										<a href="{{ url('register') }}" class="text-dark"><i class="fa fa-user me-1"></i> <span>Register</span></a>
 									</li>
 									<li>
 
