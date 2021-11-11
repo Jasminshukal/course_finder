@@ -45,10 +45,10 @@
 								<div class="col-xl-4 col-lg-4 col-md-4">
 									<div class="card mb-0 border-0 shadow-none">
 										<div class="card-body pb-0 pb-md-5">
-											<div>
+											{{-- <div>
 												<span class="icons fs-16 font-weight-semibold text-dark">Category</span>
 												<a href="javascript:void(0)" class="icons h4 font-weight-semibold text-dark"><span class=" d-block">{!! $course->requirement !!}</span></a>
-											</div>
+											</div> --}}
 										</div>
 									</div>
 								</div>
@@ -81,11 +81,21 @@
 								<div class="mb-4 description">
 									{!! $course->overview !!}
 								</div>
+								<hr/>
 								<h4 class="mb-4 font-weight-bold">Requirement</h4>
 								<div class="row">
-									<div class="col-xl-12 col-md-12">
-                                        {!! $course->requirement !!}
+									<div class="col-xl-6 col-md-12">
+									{!! $course->requirement !!}
 									</div>
+
+								</div>
+								<hr/>
+								<h4 class="mb-4 font-weight-bold">Fee Structure</h4>
+								<div class="row">
+									<div class="col-xl-6 col-md-12">
+									{!! $course->fees !!}
+									</div>
+
 								</div>
 							</div>
 						</div>

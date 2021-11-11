@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Admin\CoursesController as AdminCourses;
+use App\Http\Controllers\Admin\UniversityController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -38,5 +39,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/Courses', [AdminCourses::class, 'index'])->name('courses');
-    Route::get('/University', [App\Http\Controllers\HomeController::class, 'index'])->name('University');
+    Route::get('/Courses/add', [AdminCourses::class, 'add'])->name('courses.add');
+    Route::post('/Courses/store', [AdminCourses::class, 'store'])->name('courses.store');
+    Route::get('/University', [UniversityController::class, 'index'])->name('University');
 });

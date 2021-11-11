@@ -9,6 +9,21 @@ class Course extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'slug',
+        'fees',
+        'fee',
+        'overview',
+        'requirement',
+        'subject',
+        'laval',
+        'destination',
+        'university_id',
+        'description',
+        'currency_sym',
+    ];
+
     public function University()
     {
         return $this->belongsTo(University::class);
