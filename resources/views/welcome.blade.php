@@ -204,7 +204,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="video-img">
-                    <img src="../../assets/images/media/video.jpg" alt="img" class="cover-image br-7">
+                    <img src="{{ asset('assets/images/media/video.jpg') }}" alt="img" class="cover-image br-7">
                     <a class="mt-6 d-block video-btn mx-auto" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#homeVideo"><i class="fa fa-play text-white"></i></a>
                 </div>
             </div>
