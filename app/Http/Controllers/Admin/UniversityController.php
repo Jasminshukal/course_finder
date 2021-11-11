@@ -15,4 +15,16 @@ class UniversityController extends Controller
             'university' => University::paginate(10),
         ]);
     }
+
+    public function edit($id,Request $request)
+    {
+        return view('admin.University.edit', [
+            'uni' => University::find($id),
+        ]);
+    }
+
+    public function update(Request $request)
+    {
+        # code...
+    }
 }

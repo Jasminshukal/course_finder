@@ -12,9 +12,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-black">Courses Add</div>
+                <div class="card-header text-black">University Edit</div>
                 <div class="card-body">
-                    <form action="{{ route('courses.store') }}" method="post">
+                    <form action="{{ route('University.update',$uni->id) }}" method="post">
                         @csrf
                         @if ($errors->any())
                             <div class="alert alert-danger">
@@ -26,7 +26,7 @@
                             </div>
                         @endif
                         <div class="row">
-                            @include('admin.Courses._form')
+                            @include('admin.University._form')
                             <input type="submit" value="Submit" class="btn btn-info">
                         </div>
                     </form>
