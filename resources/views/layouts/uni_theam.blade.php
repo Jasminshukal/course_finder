@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
-
-<!-- Mirrored from spruko.com/demo/edomi/Edomi/LTR/Html/index-banner.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 12:29:10 GMT -->
 <head>
 		<!-- Meta data -->
 		<meta charset="UTF-8">
@@ -16,7 +14,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/brand/favicon.ico') }}" />
 
 		<!-- Title -->
-		<title> {{ env('APP_NAME'), 'test' }} </title>
+		<title> {{ env('APP_NAME'), 'Uni student' }} </title>
 
 		<!-- Bootstrap css -->
 		<link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet" />
@@ -169,62 +167,11 @@
 				</div>
 			</div>
 
-			<div class="py-4 footer-main border-bottom bg-dark p-0 border-top-0 border-white-1">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg">
-							<ul class="payments mb-0 mt-2">
-								<li>
-									<a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-cc-amex" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-cc-visa" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-credit-card-alt" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-cc-mastercard" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-cc-paypal" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-cc-discover" aria-hidden="true"></i></a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" class="payments-icon text-white-50"><i class="fa fa-google-wallet" aria-hidden="true"></i></a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg col-lg-auto">
-							<div class="form-group d-flex mb-0">
-								<div class="me-4 w-200">
-									<select class="form-control select2" data-placeholder="Select Country">
-										<option value="en">English</option>
-										<option value="en">Arabic</option>
-										<option value="en">German</option>
-										<option value="en">Greek</option>
-									</select>
-								</div>
-								<div class="me-4 w-200">
-									<select class="form-control select2" data-placeholder="Select Country">
-										<option value="en">USD</option>
-										<option value="en">EUR</option>
-										<option value="en">INR</option>
-										<option value="en">GBP</option>
-									</select>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="py-3 bg-dark">
 				<div class="container">
 					<div class="row d-flex">
 						<div class="col-lg-12 col-sm-12  mt-2 mb-2 text-center text-white">
-							Copyright © 2021 <a href="javascript:void(0)"  class="fs-14 text-primary">Edomi</a>. Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0)" class="fs-14 text-primary"> Spruko </a> All rights reserved.
+							Copyright © 2021 <a href="https://www.anantsoftcomputing.com/" target="_blank"  class="fs-14 text-primary">Anantsoft Computing</a>. All rights reserved.
 						</div>
 					</div>
 				</div>
@@ -238,7 +185,7 @@
 				<div class="modal-content">
 					<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i></button>
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/vslJ5OcgPyA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe width="560" height="315" src="https://www.youtube.com/watch?v=0qHWub21h5c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -307,6 +254,4 @@
 		<script src="{{ asset('assets/js/custom.js') }}"></script>
 
 	</body>
-
-<!-- Mirrored from spruko.com/demo/edomi/Edomi/LTR/Html/index-banner.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 12:29:10 GMT -->
 </html>
