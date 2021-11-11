@@ -28,7 +28,7 @@ class CourseSeeder extends Seeder
             "international_year_one" => 'International year one',
             "postgraduate" => 'Postgraduate',
             "postgraduate_research" => 'Postgraduate Research',
-            "pre-db" => 'Pre-DBA',
+            "pre-dba" => 'Pre-DBA',
             "pre-master" => 'Pre-Masters',
             "undergraduate" => 'Undergraduate',
             "certificate" => 'Certificate',

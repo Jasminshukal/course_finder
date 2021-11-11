@@ -29,10 +29,10 @@
                             <div class="top-bar-end">
                                 <ul class="custom">
                                     <li>
-                                        <a href="register.html" class="text-dark"><i class="fe fe-user me-1"></i> <span>Register</span></a>
+                                        <a href="{{ url('register') }}" class="text-dark"><i class="fe fe-user me-1"></i> <span>Register</span></a>
                                     </li>
                                     <li>
-                                        <a href="login.html" class="text-dark"><i class="fe fe-log-in me-1"></i> <span>Login</span></a>
+                                        <a href="{{ url('login') }}" class="text-dark"><i class="fe fe-log-in me-1"></i> <span>Login</span></a>
                                     </li>
                                     {{-- <li class="dropdown">
                                         <a href="javascript:void(0)" class="text-dark" data-bs-toggle="dropdown"><i class="fe fe-home me-1"></i><span> My Dashboard<i class="fe fe-chevron-down text-white ms-1"></i></span></a>
@@ -232,10 +232,11 @@
 							<div class="top-bar-end">
 								<ul class="custom">
 									<li>
-										<a href="register.html" class="text-dark"><i class="fa fa-user me-1"></i> <span>Register</span></a>
+										<a href="{{ url('register') }}" class="text-dark"><i class="fa fa-user me-1"></i> <span>Register1</span></a>
 									</li>
 									<li>
-										<a href="login.html" class="text-dark"><i class="fe fe-log-in me-1"></i> <span>Login</span></a>
+
+										<a href="{{ url('login') }}" class="text-dark"><i class="fe fe-log-in me-1"></i> <span>Login</span></a>
 									</li>
 
 								</ul>
@@ -414,9 +415,6 @@
                                     <li aria-haspopup="true"><a href="#">Institutes</a></li>
                                     <li aria-haspopup="true"><a href="#">How it works</a></li>
                                     <li aria-haspopup="true"><a href="#"> Contact Us</a></li>
-                                    <li aria-haspopup="true" class="p-0 mt-1">
-                                        <span><a class="btn btn-primary" href="course-posts.html">Register Now</a></span>
-                                    </li>
                                 </ul>
                             </nav>
 						</div>

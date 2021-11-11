@@ -7,7 +7,7 @@
 @section('content')
 
 
-
+{{--
 <section class="absolute-banner-section bg-white">
     <div class="container">
         <div class="card mb-0 box-shadow-0 overflow-hidden">
@@ -69,7 +69,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!--Section-->
 <section class="sptb bg-white">
@@ -79,26 +79,28 @@
                 <h2>Categories</h2>
                 <p class="fs-18 lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             </div>
-            <div class="ms-auto">
+            {{-- <div class="ms-auto">
                 <a class="btn btn-light mt-3" href="javascript:void(0)"><i class="fe fe-arrow-right"></i> View More</a>
-            </div>
+            </div> --}}
         </div>
         <div class="item-all-cat education-categories">
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-book-open"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Language</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
+                @foreach ($subject->take(8) as $key => $item)
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="item-all-card text-dark item-hover-card p-6">
+                            <a href="{{ URL('Search')."?Subject=".$key }}" class="absolute-link"></a>
+                            <div class="iteam-all-icon">
+                                <i class="fe fe-book-open"></i>
+                            </div>
+                            <div class="item-all-text mt-3">
+                                <h5 class="mb-0">{{ Str::limit($item,21,'...') }}</h5>
+                                <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
+                                <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                @endforeach
+                {{-- <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="item-all-card text-dark item-hover-card p-6">
                         <a href="page-list.html" class="absolute-link"></a>
                         <div class="iteam-all-icon">
@@ -188,7 +190,7 @@
                             <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -220,284 +222,8 @@
     </div>
 </section>
 
-<!--Section-->
-<section class="sptb bg-white">
-    <div class="container">
-        <div class="section-title d-md-flex">
-            <div>
-                <h2>Latest Courses</h2>
-                <p class="fs-18 lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            </div>
-            <div class="ms-auto d-inline-flex">
-                <div class="w-150 mt-3 me-4">
-                    <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
-                        <optgroup label="Categories">
-                            <option>Select</option>
-                            <option value="1">IT</option>
-                            <option value="2">Language</option>
-                            <option value="3">Science</option>
-                            <option value="4">Health</option>
-                            <option value="5">Humanities</option>
-                            <option value="6">Business</option>
-                            <option value="7">Maths</option>
-                            <option value="8">Marketing</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <div class="">
-                    <a class="btn btn-primary mt-3" href="javascript:void(0)"><i class="fe fe-arrow-right"></i> View All</a>
-                </div>
-            </div>
-        </div>
-        <div id="myCarousel1" class="owl-carousel owl-carousel-icons2">
-            <div class="item">
-                <div class="card mb-0 overflow-hidden">
-                    <div class="card-body">
-                        <div class="power-ribbon power-ribbon-top-left text-warning"><span class="bg-warning"><img src="../../assets/images/png/power.png" class=""></span></div>
-                        <img src="../../assets/images/media/light/6.jpg" alt="img" class="w-9 h-9 br-7 mb-4">
-                        <div class="">
-                            <div class="item-card2">
-                                <div class="item-card2-desc">
-                                    <div class="d-inline-flex">
-                                        <div class="star-ratings start-ratings-main clearfix me-3">
-                                            <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4" selected>4</option>
-                                                    <option value="5">5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <span class="">487 reviews</span>
-                                    </div>
-                                    <div class="item-card2-text mb-1">
-                                        <a href="page-details.html" class="text-dark"><h4 class="mb-2">Coding Classes</h4></a>
-                                    </div>
-                                    <a href="javascript:void(0)" class="">Online Classes</a>, <a href="javascript:void(0)" class="">Training</a>, <a href="javascript:void(0)" class="">Coding class</a>, <a href="javascript:void(0)" class="">Examinations</a>
-                                    <h4 class="mt-3 fs-25">$35 <del class="fs-16 text-muted">$65</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0 overflow-hidden">
-                    <div class="card-body">
-                        <img src="../../assets/images/media/light/7.jpg" alt="img" class="w-9 h-9 br-7 mb-4">
-                        <div class="">
-                            <div class="item-card2">
-                                <div class="item-card2-desc">
-                                    <div class="d-inline-flex">
-                                        <div class="star-ratings start-ratings-main clearfix me-3">
-                                            <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4" selected>4</option>
-                                                    <option value="5">5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <span class="">754 reviews</span>
-                                    </div>
-                                    <div class="item-card2-text mb-1">
-                                        <a href="page-details.html" class="text-dark"><h4 class="mb-2">Law classes</h4></a>
-                                    </div>
-                                    <a href="javascript:void(0)" class="">Law classes</a>, <a href="javascript:void(0)" class="">Training</a>, <a href="javascript:void(0)" class="">Coding class</a>, <a href="javascript:void(0)" class="">Examinations</a>
-                                    <h4 class="mt-3 fs-25">$35 <del class="fs-16 text-muted">$65</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0 overflow-hidden">
-                    <div class="card-body">
-                        <img src="../../assets/images/media/light/8.jpg" alt="img" class="w-9 h-9 br-7 mb-4">
-                        <div class="">
-                            <div class="item-card2">
-                                <div class="item-card2-desc">
-                                    <div class="d-inline-flex">
-                                        <div class="star-ratings start-ratings-main clearfix me-3">
-                                            <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4" selected>4</option>
-                                                    <option value="5">5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <span class="">965 reviews</span>
-                                    </div>
-                                    <div class="item-card2-text mb-1">
-                                        <a href="page-details.html" class="text-dark"><h4 class="mb-2">Photoshop</h4></a>
-                                    </div>
-                                    <a href="javascript:void(0)" class="">Photoshop</a>, <a href="javascript:void(0)" class="">Training</a>, <a href="javascript:void(0)" class="">Coding class</a>, <a href="javascript:void(0)" class="">Examinations</a>
-                                    <h4 class="mt-3 fs-25">$35 <del class="fs-16 text-muted">$65</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0 overflow-hidden">
-                    <div class="card-body">
-                        <img src="../../assets/images/media/light/1.jpg" alt="img" class="w-9 h-9 br-7 mb-4">
-                        <div class="">
-                            <div class="item-card2">
-                                <div class="item-card2-desc">
-                                    <div class="d-inline-flex">
-                                        <div class="star-ratings start-ratings-main clearfix me-3">
-                                            <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4" selected>4</option>
-                                                    <option value="5">5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <span class="">758 reviews</span>
-                                    </div>
-                                    <div class="item-card2-text mb-1">
-                                        <a href="page-details.html" class="text-dark"><h4 class="mb-2">HTML</h4></a>
-                                    </div>
-                                    <a href="javascript:void(0)" class="">HTML</a>, <a href="javascript:void(0)" class="">Training</a>, <a href="javascript:void(0)" class="">Coding class</a>, <a href="javascript:void(0)" class="">Examinations</a>
-                                    <h4 class="mt-3 fs-25">$35 <del class="fs-16 text-muted">$65</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0 overflow-hidden">
-                    <div class="card-body">
-                        <div class="power-ribbon power-ribbon-top-left text-warning"><span class="bg-warning"><img src="../../assets/images/png/power.png" class=""></span></div>
-                        <img src="../../assets/images/media/light/2.jpg" alt="img" class="w-9 h-9 br-7 mb-4">
-                        <div class="">
-                            <div class="item-card2">
-                                <div class="item-card2-desc">
-                                    <div class="d-inline-flex">
-                                        <div class="star-ratings start-ratings-main clearfix me-3">
-                                            <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4" selected>4</option>
-                                                    <option value="5">5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <span class="">487 reviews</span>
-                                    </div>
-                                    <div class="item-card2-text mb-1">
-                                        <a href="page-details.html" class="text-dark"><h4 class="mb-2">Online Classes</h4></a>
-                                    </div>
-                                    <a href="javascript:void(0)" class="">Online Classes</a>, <a href="javascript:void(0)" class="">Training</a>, <a href="javascript:void(0)" class="">Coding class</a>, <a href="javascript:void(0)" class="">Examinations</a>
-                                    <h4 class="mt-3 fs-25">$35 <del class="fs-16 text-muted">$65</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="card mb-0 overflow-hidden">
-                    <div class="card-body">
-                        <img src="../../assets/images/media/light/3.jpg" alt="img" class="w-9 h-9 br-7 mb-4">
 
-                        <div class="">
-                            <div class="item-card2">
-                                <div class="item-card2-desc">
-                                    <div class="d-inline-flex">
-                                        <div class="star-ratings start-ratings-main clearfix me-3">
-                                            <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4" selected>4</option>
-                                                    <option value="5">5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <span class="">487 reviews</span>
-                                    </div>
-                                    <div class="item-card2-text mb-1">
-                                        <a href="page-details.html" class="text-dark"><h4 class="mb-2">Beauty Classes</h4></a>
-                                    </div>
-                                    <a href="javascript:void(0)" class="">Online Classes</a>, <a href="javascript:void(0)" class="">Training</a>, <a href="javascript:void(0)" class="">Coding class</a>, <a href="javascript:void(0)" class="">Examinations</a>
-                                    <h4 class="mt-3 fs-25">$35 <del class="fs-16 text-muted">$65</del></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/Section-->
-
-<!--Section-->
-<section class="about-1 pt-9 pb-9 bg-background cover-image" data-bs-image-src="../../assets/images/banners/pattern2.png">
-    <div class="content-text mb-0">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-status md-mb-0">
-                        <div class="counter-icon bg-primary">
-                            <i class="typcn typcn-group-outline text-white"></i>
-                        </div>
-                        <h5>Total Learners</h5>
-                        <h2 class="counter mb-0">2569</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-status status-1 md-mb-0">
-                        <div class="counter-icon bg-primary">
-                            <i class="typcn typcn-mortar-board text-white"></i>
-                        </div>
-                        <h5>Total Graduates</h5>
-                        <h2 class="counter mb-0">1765</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-status status md-mb-0">
-                        <div class="counter-icon bg-primary">
-                            <i class="typcn typcn-globe-outline text-white"></i>
-                        </div>
-                        <h5>Total Countries</h5>
-                        <h2 class="counter mb-0">846</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter-status status">
-                        <div class="counter-icon bg-primary">
-                            <i class="typcn typcn-news text-white"></i>
-                        </div>
-                        <h5>Total Courses</h5>
-                        <h2 class="counter mb-0">7253</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/Section-->
-
-<!--Section-->
+{{-- <!--Section-->
 <section class="sptb">
     <div class="container">
         <div class="section-title">
@@ -1131,10 +857,10 @@
             </div>
         </div>
     </div>
-</section><!--/Section-->
+</section><!--/Section--> --}}
 
 <!--Section-->
-<section class="sptb">
+{{-- <section class="sptb">
     <div class="container">
         <div class="section-title">
             <h2>Online Classes</h2>
@@ -1261,11 +987,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--/Section-->
 
 <!--Section-->
-<section class="sptb position-relative cover-image bg-background" data-bs-image-src="../../assets/images/banners/pattern3.png">
+{{-- <section class="sptb position-relative cover-image bg-background" data-bs-image-src="../../assets/images/banners/pattern3.png">
     <div class="container">
         <div class="section-title">
             <h2 class="position-relative">Student Reviews</h2>
@@ -1402,11 +1128,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--/Section-->
 
 <!--Section-->
-<section class="sptb">
+{{-- <section class="sptb">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-4">
@@ -1427,11 +1153,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--/Section-->
 
 <!--Section-->
-<section class="sptb bg-white">
+{{-- <section class="sptb bg-white">
     <div class="container">
         <div class="section-title">
             <h2>Blog News</h2>
@@ -1554,11 +1280,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--/Section-->
 
 <!--Section-->
-<section class="cover-image sptb bg-background-1" data-bs-image-src="../../assets/images/banners/banner5.jpg">
+{{-- <section class="cover-image sptb bg-background-1" data-bs-image-src="../../assets/images/banners/banner5.jpg">
     <div class="content-text mb-0">
         <div class="content-text mb-0">
             <div class="container">
@@ -1587,7 +1313,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!--/Section-->
 
 <!--Section-->

@@ -47,7 +47,7 @@
 										<div class="card-body pb-0 pb-md-5">
 											<div>
 												<span class="icons fs-16 font-weight-semibold text-dark">Category</span>
-												<a href="javascript:void(0)" class="icons h4 font-weight-semibold text-dark"><span class=" d-block">Development</span></a>
+												<a href="javascript:void(0)" class="icons h4 font-weight-semibold text-dark"><span class=" d-block">{!! $course->requirement !!}</span></a>
 											</div>
 										</div>
 									</div>
@@ -81,27 +81,10 @@
 								<div class="mb-4 description">
 									{!! $course->overview !!}
 								</div>
-								<h4 class="mb-4 font-weight-bold">Specifications</h4>
+								<h4 class="mb-4 font-weight-bold">Requirement</h4>
 								<div class="row">
-									<div class="col-xl-6 col-md-12">
-										<ul class="list-unstyled widget-spec-1">
-											<li class="text-default-dark"><i class="text-default fe fe-star"></i><span>Free Demo</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-user"></i><span>100% job Assistance</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-alert-circle"></i><span> Flexible Timing</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-file"></i><span>  Realtime Project Work</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-users"></i><span> Learn From Experts</span></li>
-											<li class="text-default-dark mb-2 mb-md-0"><i class="text-default fe fe-award"></i><span> Get Certified</span></li>
-										</ul>
-									</div>
-									<div class="col-xl-6 col-md-12">
-										<ul class="list-unstyled widget-spec-1">
-											<li class="text-default-dark"><i class="text-default fe fe-heart"></i><span> Place your career</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-dollar-sign"></i><span> Reasonable fees</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-airplay"></i><span> Access on mobile and Tv</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-monitor"></i><span> High-quality content and Class videos</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-aperture"></i><span>Learning Management System</span></li>
-											<li class="text-default-dark"><i class="text-default fe fe-credit-card"></i><span> Full lifetime access</span></li>
-										</ul>
+									<div class="col-xl-12 col-md-12">
+                                        {!! $course->requirement !!}
 									</div>
 								</div>
 							</div>

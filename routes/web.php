@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\Admin\CoursesController as AdminCourses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,6 +33,10 @@ Route::get('/Detail/{slug}',[CourseController::class,'detail'])->name('Detail');
 //     return view('search');
 // });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes(['verify' => true]);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/Courses', [AdminCourses::class, 'index'])->name('courses');
+    Route::get('/University', [App\Http\Controllers\HomeController::class, 'index'])->name('University');
+});
