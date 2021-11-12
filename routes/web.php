@@ -46,6 +46,9 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     //add
     Route::get('/Courses/add', [AdminCourses::class, 'add'])->name('courses.add');
     Route::post('/Courses/store', [AdminCourses::class, 'store'])->name('courses.store');
+    //edit
+    Route::get('/Courses/edit/{id}', [AdminCourses::class, 'edit'])->name('courses.edit');
+    Route::post('/Courses/edit/{id}', [AdminCourses::class, 'update'])->name('courses.update');
     /////////////////////////////////////////////////////////////////////////////////////////
     //University
     /////////////////////////////////////////////////////////////////////////////////////////
@@ -55,5 +58,5 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::post('/University/edit/{id}', [UniversityController::class, 'update'])->name('University.update');
     //add
     Route::get('/University/add', [UniversityController::class, 'add'])->name('University.add');
-    Route::post('/University/add', [UniversityController::class, 'update'])->name('University.store');
+    Route::post('/University/add', [UniversityController::class, 'store'])->name('University.store');
 });

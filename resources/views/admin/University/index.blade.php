@@ -16,8 +16,8 @@
     $levels = Config::get('jess.levels');
 @endphp
 <div class="container">
-    {{-- <a href='{{ route('courses.add') }}' class='btn btn-info mb-2' id='NAME'>Add</a>
-    <br> --}}
+    <a href='{{ route('University.add') }}' class='btn btn-info mb-2' id='NAME'>Add</a>
+    <br>
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">

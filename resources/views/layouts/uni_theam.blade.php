@@ -74,7 +74,7 @@
 									<img src="{{ asset('assets/images/brand/logo-white.png') }}" class="w-auto border-0" alt="img">
 									<ul class="list-unstyled mb-0 mt-4">
 										<li>
-											<a href="javascript:void(0)">53 Hameem StAl NahyanAbu DhabiUnited Arab Emirates</a>
+											<a href="javascript:void(0)">53 Hameem St Al <br> Nahyan Abu Dhabi United <br> Arab Emirates</a>
 										</li>
 										<li>
 											<a href="mailto:info@unistudent.ae" target="_blank" rel="noopener">info@unistudent.ae</a>

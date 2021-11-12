@@ -53,7 +53,7 @@
                                                 {{ $item->laval }}
                                             </td>
                                             <td>
-                                                <a href='#' class='btn btn-success' id='NAME'>
+                                                <a href='{{ route('courses.edit',$item->id) }}' class='btn btn-success' id='NAME'>
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                             </td>

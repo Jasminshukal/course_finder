@@ -20,7 +20,8 @@ class CoursesController extends Controller
     public function add()
     {
         $uni=University::all();
-        return view('admin.Courses.add',compact('uni'));
+        $cou=new     Course();
+        return view('admin.Courses.add',compact('uni','cou'));
     }
 
     public function store(Request $request)
@@ -49,7 +50,8 @@ class CoursesController extends Controller
 
     public function edit($id,Request $request)
     {
+        $cou=Course::find($id);
         $uni=University::all();
-        return view('admin.Courses.edit',compact('uni'));
+        return view('admin.Courses.edit',compact('cou','uni'));
     }
 }
