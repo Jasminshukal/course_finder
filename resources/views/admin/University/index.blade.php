@@ -45,6 +45,10 @@
                                                 <a href='{{ route('University.edit',$item->id) }}' class='btn btn-success' id='NAME'>
                                                     <i class="fa fa-edit"></i>
                                                 </a>
+                                                <a href='{{ route('University.delete',$item->id) }}' class='btn btn-danger' id='NAME'>
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+
                                             </td>
                                         </tr>
                                     @empty

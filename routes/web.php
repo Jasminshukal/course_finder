@@ -50,6 +50,8 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     //edit
     Route::get('/Courses/edit/{id}', [AdminCourses::class, 'edit'])->name('courses.edit');
     Route::post('/Courses/edit/{id}', [AdminCourses::class, 'update'])->name('courses.update');
+
+    Route::get('/Courses/delete/{id}', [AdminCourses::class, 'delete'])->name('courses.delete');
     /////////////////////////////////////////////////////////////////////////////////////////
     //University
     /////////////////////////////////////////////////////////////////////////////////////////
@@ -60,6 +62,11 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     //add
     Route::get('/University/add', [UniversityController::class, 'add'])->name('University.add');
     Route::post('/University/add', [UniversityController::class, 'store'])->name('University.store');
+
+    Route::get('/University/delete/{id}', [UniversityController::class, 'delete'])->name('University.delete');
+
+
+
 
     /////////////////////////////////////////////////////////////////////////////////////////
     //export

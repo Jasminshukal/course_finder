@@ -52,4 +52,10 @@ class UniversityController extends Controller
         University::where('id',$id)->update($validated);
         return redirect(route('University'))->with('success','University Update successfully!');
     }
+
+    public function delete($id)
+    {
+        University::where('id',$id)->delete();
+        return redirect(route('University'))->with('success','University Deleted successfully!');
+    }
 }

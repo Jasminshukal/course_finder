@@ -54,4 +54,36 @@ class CoursesController extends Controller
         $uni=University::all();
         return view('admin.Courses.edit',compact('cou','uni'));
     }
+
+    public function update($id,Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required',
+            'fee' => 'required|numeric',
+            'overview' => 'required',
+            'requirement' => 'required',
+            'subject' => 'required',
+            'level' => 'required',
+            'destination' => 'required',
+            'fees' => 'required',
+            'university_id' => 'required',
+        ]);
+        $validated['slug']=Str::slug($request->name, '-');
+        $validated['laval']=$request->level;
+        $validated['description']=" ";
+        $validated['currency_sym']="$";
+
+        unset($validated['level']);
+
+        Course::where('id',$id)->update($validated);
+        return redirect(route('courses'))->with('success','Application created successfully!');
+
+
+    }
+
+    public function delete($id)
+    {
+        Course::where('id',$id)->delete();
+        return redirect(route('courses'))->with('success','University Deleted successfully!');
+    }
 }
