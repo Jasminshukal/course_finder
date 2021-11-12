@@ -16,7 +16,7 @@ class BulkData extends Controller
 
     public function export()
     {
-        return Excel::download(new CoursesExport, 'users.xlsx');
+        return Excel::download(new CoursesExport, 'CoursesExport.xlsx');
     }
 
     public function import()
