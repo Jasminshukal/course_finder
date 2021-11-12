@@ -3,6 +3,7 @@
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Admin\CoursesController as AdminCourses;
 use App\Http\Controllers\Admin\UniversityController;
+use App\Http\Controllers\BulkData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -59,4 +60,17 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     //add
     Route::get('/University/add', [UniversityController::class, 'add'])->name('University.add');
     Route::post('/University/add', [UniversityController::class, 'store'])->name('University.store');
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    //export
+    /////////////////////////////////////////////////////////////////////////////////////////
+    Route::get('importExportView', [BulkData::class, 'importExportView'])->name('bulk');
+
+    Route::get('export', [BulkData::class, 'export'])->name('export');
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    //export
+    /////////////////////////////////////////////////////////////////////////////////////////
+    Route::post('import', [BulkData::class, 'import'])->name('import');
+
 });

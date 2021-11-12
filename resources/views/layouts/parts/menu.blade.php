@@ -39,10 +39,24 @@ $pagename=\Request::route()->getName();
             <i class="fas fa-fw fa-graduation-cap"></i>
             <span>Courses</span></a>
     </li>
+
+    <li class="nav-item @if(strpos($pagename, 'Courses') !== false) active @endif">
+        <a class="nav-link" href="{{ route('bulk') }}">
+            <i class="fas fa-file-import"></i>
+            <span>Import</span></a>
+    </li>
+
+    {{-- <li class="nav-item @if(strpos($pagename, 'Courses') !== false) active @endif">
+        <a class="nav-link" href="{{ route('courses') }}">
+            <i class="fas fa-file-import"></i>
+            <span>Import</span></a>
+    </li> --}}
+
+    <hr class="sidebar-divider d-none d-md-block">
     <!-- Heading -->
 
     <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
+
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

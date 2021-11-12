@@ -20,7 +20,7 @@ class CoursesController extends Controller
     public function add()
     {
         $uni=University::all();
-        $cou=new     Course();
+        $cou=new Course();
         return view('admin.Courses.add',compact('uni','cou'));
     }
 
