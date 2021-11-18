@@ -80,4 +80,20 @@ Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     /////////////////////////////////////////////////////////////////////////////////////////
     Route::post('import', [BulkData::class, 'import'])->name('import');
 
+
+
+
+
+});
+
+Route::get('/artisan/key',function()
+{
+    \Artisan::call('key:generate');
+    return 'Configuration cache has been cleared!';
+});
+
+Route::get('/artisan/optimize',function()
+{
+    \Artisan::call('optimize');
+    return 'optimize cleared!';
 });
