@@ -7,9 +7,16 @@
 <div class="col-md-6">
     <div class="form-group">
         <label for="c_fees">fees</label>
-           <input type="text" name="fee" id="c_fees" class="form-control" value="{{ $cou->fee }}">
+           <input type="number" name="fee" id="c_fees" class="form-control" value="{{ $cou->fee }}">
     </div>
 </div>
+<div class="col-md-12">
+    <div class="form-group">
+        <label for="c_fees">Image</label>
+           <input type="file" name="file" class="form-control" required>
+    </div>
+</div>
+
 <div class="col-md-12">
     <div class="form-group">
         <label for="c_overview">Overview</label>

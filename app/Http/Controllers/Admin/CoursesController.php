@@ -67,11 +67,20 @@ class CoursesController extends Controller
             'destination' => 'required',
             'fees' => 'required',
             'university_id' => 'required',
+            'file' => 'required|mimes:jpg,png|max:2048'
         ]);
         $validated['slug']=Str::slug($request->name, '-');
         $validated['laval']=$request->level;
         $validated['description']=" ";
         $validated['currency_sym']="$";
+
+        if($request->has('file'))
+        {
+            $fileName = time().'_'.$request->file->getClientOriginalName();
+
+            $request->file->move(public_path('uploads'), $fileName);
+            $validated['banner']=$fileName;
+        }
 
         unset($validated['level']);
 

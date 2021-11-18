@@ -86,7 +86,7 @@
                     </div>
                     <nav class="horizontalMenu clearfix d-md-flex">
                         <ul class="horizontalMenu-list">
-                            <li aria-haspopup="true"><a href="#">Home</a></li>
+                            {{-- <li aria-haspopup="true"><a href="#">Home</a></li>
                             <li aria-haspopup="true"><a href="#">About Us </a></li>
                             <li aria-haspopup="true"><a href="#">Courses</a></li>
                             <li aria-haspopup="true"><a href="#">Institutes</a></li>
@@ -94,7 +94,7 @@
                             <li aria-haspopup="true"><a href="#"> Contact Us</a></li>
                             <li aria-haspopup="true" class="p-0 mt-1">
                                 <span><a class="btn btn-primary" href="course-posts.html">Register Now</a></span>
-                            </li>
+                            </li> --}}
                         </ul>
                     </nav>
                 </div>
@@ -409,12 +409,12 @@
 							</nav> --}}
                             <nav class="horizontalMenu clearfix d-md-flex">
                                 <ul class="horizontalMenu-list">
-                                    <li aria-haspopup="true"><a href="#">Home</a></li>
+                                    {{-- <li aria-haspopup="true"><a href="#">Home</a></li>
                                     <li aria-haspopup="true"><a href="#">About Us </a></li>
                                     <li aria-haspopup="true"><a href="#">Courses</a></li>
                                     <li aria-haspopup="true"><a href="#">Institutes</a></li>
                                     <li aria-haspopup="true"><a href="#">How it works</a></li>
-                                    <li aria-haspopup="true"><a href="#"> Contact Us</a></li>
+                                    <li aria-haspopup="true"><a href="#"> Contact Us</a></li> --}}
                                 </ul>
                             </nav>
 						</div>
