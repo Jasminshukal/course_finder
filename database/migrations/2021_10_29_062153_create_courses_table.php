@@ -22,7 +22,7 @@ class CreateCoursesTable extends Migration
             $table->text('requirement');
             $table->text('fees');
             $table->string('subject')->index('subject');
-            $table->string('laval')->index('laval');
+            $table->string('level')->index('laval');
             $table->string('destination')->index('destination');
             $table->timestamps();
         });
