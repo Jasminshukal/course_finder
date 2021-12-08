@@ -26,7 +26,7 @@ class CourseController extends Controller
     }
 
     if ($request->has('level') && $request->level != NULL) {
-        $courese->where('laval',$request->level);
+        $courese->where('level',$request->level);
     }
 
     if ($request->has('Subject') && $request->Subject != NULL) {
