@@ -1,5 +1,5 @@
 @if ($location=="home")
-    <div  class="cover-image bg-background-1 bg-background-dark" data-bs-image-src="{{ asset('assets/images/banners/slide-3.jpg') }}">
+    <div  class="cover-image bg-background-1 bg-background-dark" data-bs-image-src="{{ asset('assets/images/banners/slide-4.jpg') }}">
         <!--Topbar-->
         <div class="header-main">
             <div class="top-bar">
@@ -61,7 +61,7 @@
                 </div>
             </div><!--/Topbar-->
             <!-- Mobile Header -->
-            <div class="sticky">
+            {{-- <div class="sticky">
                 <div class="horizontal-header clearfix ">
                     <div class="container">
                         <a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
@@ -70,19 +70,19 @@
                         <a href="tel:245-6325-3256" class="callusbtn"><i class="icon icon-phone" aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- /Mobile Header -->
 
             <!--Horizontal-main -->
             <div class="horizontal-main header-style1 bg-dark-transparent clearfix p-0 pt-4">
-                <div class="horizontal-mainwrapper container clearfix">
-                    <div class="desktoplogo">
-                        <a href="#"><img src="{{ asset('assets/images/brand/logo1.png') }}" alt="img">
-                            <img src="{{ asset('assets/images/brand/logo.png') }}" class="header-brand-img header-white" alt="logo">
+                <div class="horizontal-mainwrapper clearfix">
+                    <div class="desktoplogo" style="position: absolute; left: 0;">
+                        <a href="#"><img src="{{ asset('assets/logo.png') }}" style="width: 150px" alt="img">
+                            <img src="{{ asset('assets/logo.png') }}" class="header-brand-img header-white" alt="logo">
                         </a>
                     </div>
                     <div class="desktoplogo-1">
-                        <a href="#"><img src="{{ asset('assets/images/brand/logo.png') }}" alt="img"></a>
+                        <a href="#"><img src="{{ asset('assets/logo.png') }}" style="width: 150px;" alt="img" style="position: absolute; left: 0;"></a>
                     </div>
                     <nav class="horizontalMenu clearfix d-md-flex">
                         <ul class="horizontalMenu-list">
@@ -107,14 +107,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 d-block mx-auto">
-                            <div class="text-white mb-7 text-center">
-                                <h1 class="font-weight-semibold fs-40">Find The Best Trainers and Build Your Future</h1>
-                                <p class="fs-18">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration <br> in some form, by injected humour, or randomised words</p>
+                            <div class="mb-7 text-center">
+                                <h1 class="font-weight-semibold fs-40">Search the best Courses for your study abroad.</h1>
+                                <p class="fs-18" style="color: #fff;">Welcome to Uni Student Course, this platform helps you, to view courses and universities across the globe. From Foundation, Bachelor’s, Master’s, and Research courses available at the universities in the UK, USA, Canada, Europe, Australia, New Zealand and many other countries.</p>
                             </div>
                             <div class="search-background bg-transparent typewrite-text">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 d-block mx-auto">
-                                        <form action="{{ route('search') }}" class="form row g-0 ">
+                                        <form action="{{ route('search') }}" class="form row g-0 " style="justify-content: center;">
                                             @include('layouts._form')
                                         </form>
                                             {{-- <div class="form-group col-xl-2 col-lg-2 col-md-12 select2-lg br-ts-7 br-bs-7 mb-0 bg-white">
@@ -252,7 +252,7 @@
 				<!--Topbar-->
 				<div class="header-main">
 					<!-- Mobile Header -->
-					<div class="sticky">
+					{{-- <div class="sticky">
 						<div class="horizontal-header clearfix ">
 							<div class="container">
 								<a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
@@ -261,7 +261,7 @@
 								<a href="tel:245-6325-3256" class="callusbtn"><i class="icon icon-phone" aria-hidden="true"></i></a>
 							</div>
 						</div>
-					</div>
+					</div> --}}
 					<!-- /Mobile Header -->
 
 					<!--Horizontal-main -->

@@ -72,12 +72,62 @@
 </section> --}}
 
 <!--Section-->
+
+
 <section class="sptb bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2 >Popular Universities</h2>
+            <p class="fs-18 lead text-white">Study with popular Universities in the world</p>
+        </div>
+        <div id="small-categories" class="owl-carousel client-carousel">
+            <div class="item">
+                <div class="client-img">
+                    <img src="../../assets/images/clients/1.png" alt="img">
+                </div>
+            </div>
+            <div class="item">
+                <div class="client-img">
+                    <img src="../../assets/images/clients/2.png" alt="img">
+                </div>
+            </div>
+            <div class="item">
+                <div class="client-img">
+                    <img src="../../assets/images/clients/3.png" alt="img">
+                </div>
+            </div>
+            <div class="item">
+                <div class="client-img">
+                    <img src="../../assets/images/clients/4.png" alt="img">
+                </div>
+            </div>
+            <div class="item">
+                <div class="client-img">
+                    <img src="../../assets/images/clients/5.png" alt="img">
+                </div>
+            </div>
+            <div class="item">
+                <div class="client-img">
+                    <img src="../../assets/images/clients/7.png" alt="img">
+                </div>
+            </div>
+            <div class="item">
+                <div class="client-img">
+                    <img src="../../assets/images/clients/8.png" alt="img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--/Section-->
+
+<section class="sptb position-relative cover-image bg-black" data-bs-image-src="../../assets/images/banners/pattern3.png">
     <div class="container">
         <div class="section-title d-md-flex">
             <div>
-                <h2>Categories</h2>
-                <p class="fs-18 lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <h1 class="text-white">Most Popular Courses</h1>
+                <p style="font-weight: 900;" class="text-white fs-18 lead">Find out most popular course from top universities</p>
             </div>
             {{-- <div class="ms-auto">
                 <a class="btn btn-light mt-3" href="javascript:void(0)"><i class="fe fe-arrow-right"></i> View More</a>
@@ -87,119 +137,28 @@
             <div class="row">
                 @foreach ($subject->take(8) as $key => $item)
                     <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="item-all-card text-dark item-hover-card p-6">
-                            <a href="{{ URL('Search')."?Subject=".$key }}" class="absolute-link"></a>
+                        <div class="item-all-card text-dark item-hover-card p-6 bg-white" title="{{ $item->name }}">
+                            <a href="{{ url('Detail/'.$item->slug) }}" class="absolute-link"></a>
                             <div class="iteam-all-icon">
                                 <i class="fe fe-book-open"></i>
                             </div>
                             <div class="item-all-text mt-3">
-                                <h5 class="mb-0">{{ Str::limit($item,21,'...') }}</h5>
+                                <h5 class="mb-0">{{ Str::limit($item->name,18,'...') }}</h5>
                                 <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
                                 <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                {{-- <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-airplay"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">IT Courses</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-database"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Data Science</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-heart"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Health</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fa fa-balance-scale"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Law Course</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-hash"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Maths</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark mb-lg-0 item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-briefcase"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Business</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="item-all-card text-dark mb-lg-0 item-hover-card p-6">
-                        <a href="page-list.html" class="absolute-link"></a>
-                        <div class="iteam-all-icon">
-                            <i class="fe fe-bar-chart"></i>
-                        </div>
-                        <div class="item-all-text mt-3">
-                            <h5 class="mb-0">Marketing</h5>
-                            <p class="mt-3">Sed do eiusmod tempor ut labore et dolore magna aliqua</p>
-                            <a class="btn-link" href="javascript:void(0)"><i class="fe fe-chevron-right"></i> View More</a>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
 </section>
-<!--/Section-->
+
 
 
 <!--Section-->
-<section class="sptb">
+{{-- <section class="sptb">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -220,7 +179,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 {{-- <!--Section-->
@@ -857,7 +816,8 @@
             </div>
         </div>
     </div>
-</section><!--/Section--> --}}
+</section>
+<!--/Section--> --}}
 
 <!--Section-->
 {{-- <section class="sptb">
@@ -991,144 +951,7 @@
 <!--/Section-->
 
 <!--Section-->
-{{-- <section class="sptb position-relative cover-image bg-background" data-bs-image-src="../../assets/images/banners/pattern3.png">
-    <div class="container">
-        <div class="section-title">
-            <h2 class="position-relative">Student Reviews</h2>
-            <p class="fs-18 position-relative">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="myCarousel" class="owl-carousel testimonial-owl-carousel">
-                    <div class="item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="testimonial-img"><img src="../../assets/images/users/female/4.jpg" class="br-7 w-120 h-120" alt="img"></div>
-                                    </div>
-                                    <div class="col-md-9 col-sm-12 mt-2">
-                                        <div class="d-md-flex">
-                                            <div>
-                                                <h4 class="title font-weight-bold">Lilly Potter</h4>
-                                                <span class="post">Web developer student</span>
-                                            </div>
-                                            <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
-                                                <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                    <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4" selected>4</option>
-                                                        <option value="5">5</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i> But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="testimonial-img"><img src="../../assets/images/users/male/33.jpg" class="br-7 w-120 h-120" alt="img"></div>
-                                    </div>
-                                    <div class="col-md-9 col-sm-12 mt-2">
-                                        <div class="d-md-flex">
-                                            <div>
-                                                <h4 class="title font-weight-bold">John Joya</h4>
-                                                <span class="post">Web developer student</span>
-                                            </div>
-                                            <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
-                                                <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                    <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4" selected>4</option>
-                                                        <option value="5">5</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i> But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="testimonial-img"><img src="../../assets/images/users/female/1.jpg" class="br-7 w-120 h-120" alt="img"></div>
-                                    </div>
-                                    <div class="col-md-9 col-sm-12 mt-2">
-                                        <div class="d-md-flex">
-                                            <div>
-                                                <h4 class="title font-weight-bold">Rebacca wisely</h4>
-                                                <span class="post">Web designer student</span>
-                                            </div>
-                                            <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
-                                                <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                    <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4" selected>4</option>
-                                                        <option value="5">5</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i> But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-12">
-                                        <div class="testimonial-img"><img src="../../assets/images/users/male/34.jpg" class="br-7 w-120 h-120" alt="img"></div>
-                                    </div>
-                                    <div class="col-md-9 col-sm-12 mt-2">
-                                        <div class="d-md-flex">
-                                            <div>
-                                                <h4 class="title font-weight-bold">williamson</h4>
-                                                <span class="post">Web developer student</span>
-                                            </div>
-                                            <div class="star-ratings start-ratings-main clearfix mb-3 ms-auto">
-                                                <div class="stars stars-example-fontawesome stars-example-fontawesome-sm">
-                                                    <select class="example-fontawesome" name="rating" autocomplete="off">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4" selected>4</option>
-                                                        <option value="5">5</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="fs-16 leading-normal mt-4 mb-0"><i class="fa fa-quote-left"></i> But I must explain to you how all this mistaken idea of denouncing pleasure and praising</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
+
 <!--/Section-->
 
 <!--Section-->

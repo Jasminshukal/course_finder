@@ -1414,7 +1414,7 @@ form.convFormDynamic button.submit:hover {
 }
 
 .bg-background-1.bg-background-dark:before {
-  background: rgba(40, 40, 52, 0.8) !important;
+    background: rgb(141 142 164 / 60%) !important;
 }
 
 .bg-background-1 .top-bar, .banner1 .top-bar {

@@ -18,6 +18,7 @@ class Course extends Model
         'requirement',
         'subject',
         'laval',
+        'level',
         'destination',
         'university_id',
         'description',

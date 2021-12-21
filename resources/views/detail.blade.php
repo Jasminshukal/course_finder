@@ -26,8 +26,13 @@
 										</li>
 									</ul>
 								</div>
-								<div class="item-card-text-bottom">
-									<h4 class="mb-0">{{ $course->currency_sym }}{{ $course->fee }},000</h4>
+								<div class="item-card-text-bottom" style="display:none;">
+									{{-- <h4 class="mb-0">{{ $course->currency_sym }}{{ $course }}
+                                    @if ($course->fee)
+                                        {{ $course->fee }}
+                                    @else
+                                        0
+                                    @endif</h4> --}}
 								 </div>
 							</div>
 							<div class="row details-1">
@@ -82,14 +87,17 @@
 									{!! $course->overview !!}
 								</div>
 								<hr/>
-								<h4 class="mb-4 font-weight-bold">Requirement</h4>
-								<div class="row">
-									<div class="col-xl-6 col-md-12">
-									{!! $course->requirement !!}
-									</div>
+                                @if($course->requirement != "")
+                                    <h4 class="mb-4 font-weight-bold">Requirement</h4>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-md-12">
+                                        {!! $course->requirement !!}
+                                        </div>
 
-								</div>
-								<hr/>
+                                    </div>
+                                    <hr/>
+                                @endisset
+
 								<h4 class="mb-4 font-weight-bold">Fee Structure</h4>
 								<div class="row">
 									<div class="col-xl-6 col-md-12">
@@ -108,15 +116,16 @@
 							<div class="card-body">
 								<div>
 									<div class="form-group">
-										<input type="text" class="form-control" id="name1" placeholder="Your Name">
+										<input type="text" class="form-control" id="name1" placeholder="Your Name" required>
 									</div>
 									<div class="form-group">
-										<input type="email" class="form-control" id="email" placeholder="Email Course address">
+										<input type="email" class="form-control" id="email" placeholder="Email Course address" required>
 									</div>
 									<div class="form-group">
-										<textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Comment"></textarea>
+										<textarea class="form-control" name="example-textarea-input" rows="6" placeholder="Comment" required></textarea>
 									</div>
-									<a href="javascript:void(0)" class="btn btn-primary">Send Reply</a>
+                                    <button class="btn btn-primary" disabled>Apply</button>
+									{{-- <a href="javascript:void(0)" class="btn btn-primary">Send Reply</a> --}}
 								</div>
 							</div>
 						</div>
@@ -130,7 +139,9 @@
 							</div>
 							<div class="card-body  item-user">
 								<div class="profile-pic mb-0">
-									<img src="{{ $course->University->image }}" class="brround avatar-xxl" alt="user">
+                                    @isset($course->University->image)
+    									<img src="{{ asset($course->University->image) }}" class="brround avatar-xxl">
+                                    @endisset
 									<div >
 										<a href="userprofile.html" class="text-dark"><h4 class="mt-3 mb-1 font-weight-bold">{{ $course->University->name }} </h4></a>
 										<span class="lead fs-16">Member Since November 2008</span>

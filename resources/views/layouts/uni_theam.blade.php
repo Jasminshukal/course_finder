@@ -71,7 +71,7 @@
 						<div class="col-lg-6">
 							<div class="row">
 								<div class="col-lg-7 col-md-12">
-									<img src="{{ asset('assets/images/brand/logo-white.png') }}" class="w-auto border-0" alt="img">
+									<img src="{{ asset('assets/images/brand/logo-white.png') }}" style="width: 200px;" class="border-0" alt="img">
 									<ul class="list-unstyled mb-0 mt-4">
 										<li>
 											<a href="javascript:void(0)">53 Hameem St Al <br> Nahyan Abu Dhabi United <br> Arab Emirates</a>

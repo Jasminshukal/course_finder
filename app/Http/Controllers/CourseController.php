@@ -10,7 +10,9 @@ class CourseController extends Controller
 {
   public function index(Request $request)
   {
-    $subject = collect(config('jess.categories'));
+    //$subject = collect(config('jess.categories'));
+
+    $subject = Course::limit(8)->get();
     //dd($newCollection);
 
     return view('welcome',compact('request','subject'));

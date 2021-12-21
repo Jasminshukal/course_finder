@@ -38,7 +38,7 @@ class CoursesController extends Controller
             'university_id' => 'required',
         ]);
         $validated['slug']=Str::slug($request->name, '-');
-        $validated['laval']=$request->level;
+        $validated['level']=$request->level;
         $validated['description']=" ";
         $validated['currency_sym']="$";
 
@@ -70,7 +70,7 @@ class CoursesController extends Controller
             'file' => 'required|mimes:jpg,png|max:2048'
         ]);
         $validated['slug']=Str::slug($request->name, '-');
-        $validated['laval']=$request->level;
+        $validated['level']=$request->level;
         $validated['description']=" ";
         $validated['currency_sym']="$";
 
@@ -82,7 +82,7 @@ class CoursesController extends Controller
             $validated['banner']=$fileName;
         }
 
-        unset($validated['level']);
+        // unset($validated['level']);
 
         Course::where('id',$id)->update($validated);
         return redirect(route('courses'))->with('success','Application created successfully!');
