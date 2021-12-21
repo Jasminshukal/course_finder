@@ -29,7 +29,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-
+        @include('layouts.parts.menu')
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -241,7 +241,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Mrjess.in {{ date('Y') }}</span>
+
                     </div>
                 </div>
             </footer>
