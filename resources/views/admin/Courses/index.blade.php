@@ -46,8 +46,9 @@
                                                 <span class="badge badge-primary">{{ $item->currency_sym }} {{ $item->fee }}</span>
                                             </td>
                                             <td>
-
-                                                {{ $destination[$item->destination] or 'Not Define' }}
+                                                @isset($destination[$item->destination])
+                                                {{ $destination[$item->destination] }}
+                                                @endisset
                                             </td>
                                             <td>
                                                 {{ $item->laval }}
