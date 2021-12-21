@@ -47,7 +47,7 @@
                                             </td>
                                             <td>
 
-                                                {{ $destination[$item->destination] }}
+                                                {{ $destination[$item->destination] or 'Not Define' }}
                                             </td>
                                             <td>
                                                 {{ $item->laval }}
