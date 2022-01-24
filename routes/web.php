@@ -36,6 +36,15 @@ Route::get('/Detail/{slug}',[CourseController::class,'detail'])->name('Detail');
 // });
 
 Auth::routes(['verify' => true]);
+
+Route::get('/register', function() {
+    return redirect('/login');
+});
+
+Route::post('/register', function() {
+    return redirect('/login');
+});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
