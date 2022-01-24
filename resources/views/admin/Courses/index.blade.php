@@ -30,7 +30,7 @@
                                     <th>Name</th>
                                     <th>Fees</th>
                                     <th>Destination</th>
-                                    <th>Laval</th>
+                                    <th>Level</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
